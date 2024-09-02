@@ -21,7 +21,7 @@ namespace Orders.Backend.Controllers
         {
             //return Ok(await _context.Countries.ToListAsync());
             
-            var country = await _context.Countries.ToListAsync();
+            var country = await _context.Countries.AsNoTracking().ToListAsync();
             return Ok(country);
         }
 

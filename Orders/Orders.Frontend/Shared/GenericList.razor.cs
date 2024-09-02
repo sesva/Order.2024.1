@@ -2,7 +2,7 @@
 
 namespace Orders.Frontend.Shared
 {
-    public partial class GenericList<Timtem>
+    public partial class GenericList<Titem>
     {
         [Parameter] public RenderFragment? Loading { get; set; }
         [Parameter] public RenderFragment? NoRecords { get; set; }

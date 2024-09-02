@@ -2,30 +2,30 @@
 
 <h3>Paises</h3>
 
-@if(Countries == null)
-{
-    <p>Cargando...</p>
-}
-else
-{
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>País</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var country in Countries!)
-            {
+<GenericList MyList="Countries">
+    <Loading>
+        <!--<p>Cargando...</p>-->
+    </Loading>
+    <Body>
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>@country.Name</td>
-                    <td>
-                        <a class="btn btn-warning">Editar</a>
-                        <button class="btn btn-danger">Borrar</button>
-                    </td>
+                    <th>País</th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var country in Countries!)
+                {
+                    <tr>
+                        <td>@country.Name</td>
+                        <td>
+                            <a class="btn btn-warning">Editar</a>
+                            <button class="btn btn-danger">Borrar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </Body>
+</GenericList>

@@ -38,6 +38,10 @@ namespace Orders.Frontend.Repositories
             {
                 return "No tienes permisos para hacer esta operación";
             }
+            if (statusCode == HttpStatusCode.MethodNotAllowed)
+            {
+                return "Error: El método HTTP no está permitido en este recurso.";
+            }
 
             return "Ha ocurrido un error inesperado.";
         }
